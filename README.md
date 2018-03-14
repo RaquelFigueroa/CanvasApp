@@ -2,7 +2,7 @@
 
 **CanvasApp** is an app that allows users to use gestures in order to create fun pictures using a variety of images.
 
-Time spent: **X** hours spent in total
+Time spent: **1** hours spent in total
 
 ## User Stories
 
