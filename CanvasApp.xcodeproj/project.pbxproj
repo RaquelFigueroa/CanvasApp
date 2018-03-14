@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0D5E2F0A205734F80010D4E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E2F09205734F80010D4E9 /* AppDelegate.swift */; };
-		0D5E2F0C205734F80010D4E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E2F0B205734F80010D4E9 /* ViewController.swift */; };
 		0D5E2F0F205734F80010D4E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5E2F0D205734F80010D4E9 /* Main.storyboard */; };
 		0D5E2F11205734F80010D4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5E2F10205734F80010D4E9 /* Assets.xcassets */; };
 		0D5E2F14205734F80010D4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5E2F12205734F80010D4E9 /* LaunchScreen.storyboard */; };
 		0D5E2F1F205734F90010D4E9 /* CanvasAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E2F1E205734F90010D4E9 /* CanvasAppTests.swift */; };
 		0D5E2F2A205734F90010D4E9 /* CanvasAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E2F29205734F90010D4E9 /* CanvasAppUITests.swift */; };
+		0D5E2F38205738A40010D4E9 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E2F37205738A40010D4E9 /* CanvasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		0D5E2F06205734F80010D4E9 /* CanvasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5E2F09205734F80010D4E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D5E2F0B205734F80010D4E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D5E2F0E205734F80010D4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D5E2F10205734F80010D4E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D5E2F13205734F80010D4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		0D5E2F25205734F90010D4E9 /* CanvasAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5E2F29205734F90010D4E9 /* CanvasAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasAppUITests.swift; sourceTree = "<group>"; };
 		0D5E2F2B205734F90010D4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D5E2F37205738A40010D4E9 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				0D5E2F09205734F80010D4E9 /* AppDelegate.swift */,
-				0D5E2F0B205734F80010D4E9 /* ViewController.swift */,
 				0D5E2F0D205734F80010D4E9 /* Main.storyboard */,
 				0D5E2F10205734F80010D4E9 /* Assets.xcassets */,
 				0D5E2F12205734F80010D4E9 /* LaunchScreen.storyboard */,
 				0D5E2F15205734F80010D4E9 /* Info.plist */,
+				0D5E2F37205738A40010D4E9 /* CanvasViewController.swift */,
 			);
 			path = CanvasApp;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5E2F0C205734F80010D4E9 /* ViewController.swift in Sources */,
+				0D5E2F38205738A40010D4E9 /* CanvasViewController.swift in Sources */,
 				0D5E2F0A205734F80010D4E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
