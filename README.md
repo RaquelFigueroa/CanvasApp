@@ -2,7 +2,7 @@
 
 **CanvasApp** is an app that allows users to use gestures in order to create fun pictures using a variety of images.
 
-Time spent: **2** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 ls
@@ -16,11 +16,11 @@ The following **required** user stories are complete:
 
 The following **stretch** user stories are implemented:
 
-- [ ] Tray bounces when returning to it's up or down positions (+1pt)
+- [x] Tray bounces when returning to it's up or down positions (+1pt)
 - [ ] User sees as new face scale up and back down to simulate a "picking up and dropping" appearance (+1pt)
 - [ ] User can use a pinch gesture to scale faces up or down (+1pt)
 - [ ] User can use a rotation gesture to rotate the position of faces on the canvas (+1pt)
-- [ ] User sees the tray arrow adjust to point up or down in relation to the position of the tray (+1pt)
+- [x] User sees the tray arrow adjust to point up or down in relation to the position of the tray (+1pt)
 - [ ] If the user releases a face in the tray area, the face animates back to it's original position on the tray (+1pt)
 - [ ] User can use a double tap gesture to delete a face (+1pt)
 - [ ] If the user attempts to drag the tray above the open position, it should began a "frictional drag" (+1pt)
@@ -36,8 +36,8 @@ The following **stretch** user stories are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. I am wondering where my peers find resources for learning about different ways of designing their apps. What are their inspirations?
+2. I am also wondering if my peers rely on the Xcode interface to add layout specifications or is it done in code?
 
 ## Video Walkthrough
 
@@ -49,11 +49,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had some trouble with assigning the pan gesture recognizer to the newly created image. I mistakenly added it to the original emoji image in the tray, so the tray images would leave the tray and move instead of the new images. It was an easy fix, but one that was too easy to overlook and cause some stress!
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright 2018 R. Figueroa
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
