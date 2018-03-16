@@ -67,6 +67,8 @@ class CanvasViewController: UIViewController {
         
         let doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(didDoubleTap(sender:)))
         doubleTapGestureRecognizer.numberOfTapsRequired = 2
+        
+        let rotateGestureRecognizer = UIRotationGestureRecognizer(target: self, action:#selector(didRotate(sender:)))
 
         
         if sender.state == .began {
@@ -81,6 +83,7 @@ class CanvasViewController: UIViewController {
             newlyCreatedFace.addGestureRecognizer(panGestureRecognizer)
             newlyCreatedFace.addGestureRecognizer(pinchGestureRecognizer)
             newlyCreatedFace.addGestureRecognizer(doubleTapGestureRecognizer)
+            newlyCreatedFace.addGestureRecognizer(rotateGestureRecognizer)
             
         } else if sender.state == .changed {
             newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
@@ -107,15 +110,38 @@ class CanvasViewController: UIViewController {
     }
     
     @objc func didPinch(sender: UIPinchGestureRecognizer) {
-        let scale = sender.scale
+        
         let imageView = sender.view as! UIImageView
-        imageView.transform = imageView.transform.scaledBy(x: scale, y: scale)
-        sender.scale = 1
+        
+        if sender.state == .began {
+            
+        } else if sender.state == .changed {
+            let scale = sender.scale
+            imageView.transform = CGAffineTransform(scaleX: scale, y: scale)
+            imageView.transform = imageView.transform.scaledBy(x: scale, y: scale)
+            
+        } else if sender.state == .ended {
+            sender.scale = 1
+        }
     }
     
     @objc func didDoubleTap(sender: UITapGestureRecognizer) {
         let imageView = sender.view as! UIImageView
         imageView.removeFromSuperview()
+    }
+    
+    @objc func didRotate(sender: UIRotationGestureRecognizer) {
+      let imageView = sender.view as! UIImageView
+        
+        if sender.state == .began {
+            
+        } else if sender.state == .changed {
+            let rotation = sender.rotation
+            imageView.transform = CGAffineTransform(rotationAngle: rotation)
+            
+        } else if sender.state == .ended {
+            sender.rotation = 0
+        }
     }
     
     
