@@ -64,6 +64,9 @@ class CanvasViewController: UIViewController {
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan(sender:)))
         let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(sender:)))
+        
+        let doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(didDoubleTap(sender:)))
+        doubleTapGestureRecognizer.numberOfTapsRequired = 2
 
         
         if sender.state == .began {
@@ -77,6 +80,7 @@ class CanvasViewController: UIViewController {
             newlyCreatedFace.isUserInteractionEnabled = true
             newlyCreatedFace.addGestureRecognizer(panGestureRecognizer)
             newlyCreatedFace.addGestureRecognizer(pinchGestureRecognizer)
+            newlyCreatedFace.addGestureRecognizer(doubleTapGestureRecognizer)
             
         } else if sender.state == .changed {
             newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
@@ -108,6 +112,12 @@ class CanvasViewController: UIViewController {
         imageView.transform = imageView.transform.scaledBy(x: scale, y: scale)
         sender.scale = 1
     }
+    
+    @objc func didDoubleTap(sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        imageView.removeFromSuperview()
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
